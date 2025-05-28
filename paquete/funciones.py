@@ -60,17 +60,6 @@ def mostrar_matriz(matriz:list)->list:
 # mostrar_matriz(resultado)
 
 
-matriz_ventas = [[1,3,5,6],
-                 [1,3,5,6],
-                 [1,3,5,6],
-                 [1,555555,5,6],
-                 [1,3,5,5555555],]
-matriz_vendedores = [["Matias", "Damian","Marcos","Janina"],
-                     ["Daniel", "Matias", "Damian","Janina"],
-                     ["Daniel",  "Damian","Marcos","Janina"],
-                     ["Daniel", "Matias" ,"Marcos","Janina"],
-                     ["Daniel", "Matias", "Damian","Janina"],]
-
 def buscar_vendedor_maximo(matriz_vendedores:list, matriz_ventas:list)-> str:
     """
     Esta funcion recibe una matriz de ventas, una lista

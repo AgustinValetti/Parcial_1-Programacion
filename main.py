@@ -4,6 +4,7 @@ def iniciar():
     depositos = ["CABA ", "Z SUR ", "Z OESTE","Z NORTE"]
     vendedor = ["Daniel", "Matias", "Damian","Marcos","Janina"]
     matriz_vacia = crear_matriz(len(vendedor), len(depositos))
+    matriz_vacia_vendedores = crear_matriz(len(vendedor), len(depositos))
     print("Bienvenido al programa")
 
     inicio = True
@@ -17,7 +18,7 @@ def iniciar():
             matriz_ventas = cargar_secuencialmente(matriz_vacia, vendedor,depositos, "Ingrese un valor de la venta de")
             print()
         if opcion == 2:
-            resultado2 = cargar_secuencialmente(matriz_vacia, depositos,vendedor, "Ingrese un valor de la venta en")
+            resultado2 = cargar_secuencialmente(matriz_vacia_vendedores, depositos,vendedor, "Ingrese un valor de la venta en")
             print()
 
         if opcion == 3:
