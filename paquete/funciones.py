@@ -26,7 +26,14 @@ def crear_matriz(filas:int,
     return matriz
 
 
-def cargar_secuencialmente(matriz, vendedor, deposito,mensaje=""):
+def cargar_secuencialmente(matriz:list,
+                            vendedor:list,
+                            deposito:list,
+                            mensaje:str="")-> list:
+    """
+    Esta funcion recibe una matriz y la carga secuencialmente
+    retorna la matriz cargada
+    """
     for i in range(len(matriz)):
         for j in range(len(matriz[i])):
             cargar = int(input(f"{mensaje} {vendedor[j]} en {deposito[j]}:  "))
@@ -36,7 +43,12 @@ def cargar_secuencialmente(matriz, vendedor, deposito,mensaje=""):
     
     return matriz
 
-def mostrar_matriz(matriz):
+def mostrar_matriz(matriz:list)->list:
+    """
+    Esta funcion recibe una matriz y
+    la retorna ordenada para una mejor
+    visualizacion
+    """
     for i in range(len(matriz)):
         for j in range(len(matriz[i])):
             print(matriz[i][j], "\t", end="")
@@ -59,7 +71,11 @@ matriz_vendedores = [["Matias", "Damian","Marcos","Janina"],
                      ["Daniel", "Matias" ,"Marcos","Janina"],
                      ["Daniel", "Matias", "Damian","Janina"],]
 
-def buscar_vendedor_maximo(matriz_vendedores, matriz_ventas):
+def buscar_vendedor_maximo(matriz_vendedores:list, matriz_ventas:list)-> str:
+    """
+    Esta funcion recibe una matriz de ventas, una lista
+    y retonra los vendedores con mayores ventas
+    """
 
     print("Vendedores superiroes a 500.000:")
     for i in range(len(matriz_ventas)):
@@ -71,9 +87,15 @@ def buscar_vendedor_maximo(matriz_vendedores, matriz_ventas):
 
 
 
-resultado = buscar_vendedor_maximo(matriz_vendedores, matriz_ventas)
+# resultado = buscar_vendedor_maximo(matriz_vendedores, matriz_ventas)
 
-def buscar_zona_maximo(matriz_ventas, depositos):
+def buscar_zona_maximo(matriz_ventas:list, depositos:list)-> str:
+
+    """
+    Esta funcion recibe por parametro una matriz de ventas
+    y retorna las zonas con ventas mayores a 2.000.000
+    """
+
     cantidad_zonas = len(matriz_ventas[0])
     print("Zonas superiroes a 2.000.000:")
     for j in range((cantidad_zonas)):
@@ -85,9 +107,16 @@ def buscar_zona_maximo(matriz_ventas, depositos):
             print(f"Zona {depositos[j]} (Total recaudacion vendida: ${total_de_la_zona})")
 
 
-resultado2 = buscar_zona_maximo(matriz_ventas,depositos)
+# resultado2 = buscar_zona_maximo(matriz_ventas,depositos)
 
-def mostrar_mejores_vendedores(matriz_ventas,depositos,vendores):
+def mostrar_mejores_vendedores(matriz_ventas:list
+                               ,depositos:list
+                               ,vendores:list)-> str:
+
+    """
+    Esta funcion recibe por parametro una matriz de ventas
+    y retorna los mejores vendedores
+    """
 
     cantidad_de_zonas = len(matriz_ventas[0])
 
@@ -103,6 +132,8 @@ def mostrar_mejores_vendedores(matriz_ventas,depositos,vendores):
         print(f"En {depositos[j]}: el mejor vendedor fue {mejor_vendedor}, Venta total: { venta_maxima}")
 
     return
-probar = mostrar_mejores_vendedores(matriz_ventas, depositos,vendedor)
+# probar = mostrar_mejores_vendedores(matriz_ventas, depositos,vendedor)
 
-print(probar)
+# print(probar)
+
+
